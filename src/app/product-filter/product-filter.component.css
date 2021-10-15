@@ -1,0 +1,19 @@
+.filter-products{
+    padding: 1px;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+}
+.filter-block{
+    /* position: absolute; */
+    width: 25%;
+    border: 1px black solid;
+    overflow-y: scroll;
+    height: 100%;
+}
+.products-block{
+    width: 74%;
+    overflow-y: scroll;
+    height: 100%;
+}

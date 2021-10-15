@@ -1,0 +1,21 @@
+<div class="products-list">
+    <div *ngIf="loading">
+        <h1>loading...</h1>
+    </div>
+    <div *ngFor="let product of products" class="product">
+        <div class="product-image-block1">
+            <img src="{{product.image}}" class="product-image">
+        </div>
+        <p class="product-title product-name">{{product.title}}</p>
+        <p class="product-title product-price">Price: {{product.price}}$</p>
+        <p class="rating">{{product.rating.rate}}<img src="../../assets/images/star.png" width="23px">
+            <span class="rating-tip">
+                {{product.rating.count}} Votes
+            </span>
+        </p>
+        <div class="buy-btn-block">
+            <button class="buy-btn" *ngIf="!product.onCart" (click)="product.onCart=true">Add to cart</button>
+            <button class="buy-btn" *ngIf="product.onCart" (click)="cart()">Cart <img src="../../assets/images/cart.png" width="15px"></button>
+        </div>
+    </div>
+</div>

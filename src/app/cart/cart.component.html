@@ -1,0 +1,45 @@
+<div *ngIf="cart" class="cart">
+    <div class="cart-name">
+        <h1>Cart {{index}}</h1>
+        <h1>Total cost: {{totalCost()}}$ </h1>
+    </div>
+    <div class="product-list">
+        <div *ngFor="let product of products" class="product">
+            <!-- <h2>Title: {{product.title}}</h2>
+            <h2>Quantity: {{productQuantity[product.id]}}</h2> -->
+            <div class="product-image-block1">
+                <img src="{{product.image}}" class="product-image">
+            </div>
+            <p class="product-title product-name">{{product.title}}</p>
+            <p class="product-title product-price">Price: {{product.price}}$</p>
+            <div>
+                <p class="product-title product-price">Quantity: 
+                    <input type="number" [(ngModel)]="productQuantity[product.id]" class="quantity-amount" 
+                    [disabled]="!productManageQuantity[product.id] || cart.isBooked" 
+                    [ngClass]="{'underline':productManageQuantity[product.id]}">
+                    <img src="../../assets/images/edit.png" class="edit-btn" (click)="productManageQuantity[product.id]=true" *ngIf="!productManageQuantity[product.id] && !cart.isBooked">
+                    <img src="../../assets/images/task-done.png" class="edit-btn" (click)="productManageQuantity[product.id]=false" *ngIf="productManageQuantity[product.id] && !cart.isBooked">
+                </p>
+
+            </div>
+            <p class="product-title product-price cost">Cost: {{product.price*productQuantity[product.id]}}$ </p>
+            <p class="rating">{{product.rating.rate}}<img src="../../assets/images/star.png" width="23px">
+                <span class="rating-tip">
+                    {{product.rating.count}} Votes
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="cart-dates">
+        <p class="cart-data">Departure date:
+            <input type="date" [(ngModel)]="cart.departureDate" class="cart-data-input" [disabled]="cart.isBooked">
+        </p>
+        <p class="cart-data">
+            Arrival date:
+            <input type="date" [(ngModel)]="cart.arrivalDate" class="cart-data-input" [disabled]="cart.isBooked">
+        </p>
+    </div>
+    <button class="buy-btn" *ngIf="!cart.isBooked" (click)="buy()">Buy</button>
+    <h1 *ngIf="cart.isBooked" class="cart-status">Status: {{cart.status}}</h1>
+    <!-- <p class="cost total-cost">Total cost: {{totalCost()}}$</p> -->
+</div>

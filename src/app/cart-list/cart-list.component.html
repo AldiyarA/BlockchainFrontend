@@ -1,0 +1,5 @@
+<div class="carts">
+    <div *ngFor="let cart of carts">
+        <app-cart [cart]="cart" [index]="indexOfCart(cart)"></app-cart>
+    </div>
+</div>

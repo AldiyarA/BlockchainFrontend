@@ -1,0 +1,21 @@
+<div class="top">
+    <div class="logo">
+        <img src="../../assets/images/logo.png" class="logo-img" (click)="home()">
+        <div class="name">
+            <h3 (click)="home()">NOMAD</h3>
+        </div>
+    </div>
+    <div class="search">
+        <input type="text" class="search-input" [(ngModel)]="fragment">
+        <button class="search-button" (click)="search()">Search</button>
+    </div>
+    <div class="right">
+        <div *ngIf="logged" class="cart">
+            <img src="../../assets/images/cart.png" class="cart-img" (click)="cart()">
+        </div>
+        <div class="logInOut">
+            <button *ngIf="logged" (click)="logOut()" class="logInOut-btn">Log out</button>
+            <button *ngIf="!logged" (click)="logIn()" class="logInOut-btn">Log in</button>
+        </div>
+    </div>
+</div>

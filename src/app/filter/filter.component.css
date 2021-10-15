@@ -1,0 +1,52 @@
+.f-bnts-block{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.f-bnts{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 21px;
+}
+.price-range-block{
+    margin: 5px 20px 0;
+    padding: 5px 10px 10px;
+    /* background-color: #00f3; */
+    background-color: #00ffff40;
+    border: 1px #00ffff70 solid;
+    border-radius: 10px;
+}
+.price-range-txt{
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+.price-range{
+    font-size: 21px;
+    padding: 0 10px;
+    margin: 5px;
+    width: 150px;
+    height: 30px;
+    border: 1px #c1c1d4 solid;
+    border-radius: 3px;
+}
+.categories, .rating-box{
+    padding: 10px 10px 30px;
+    margin: 35px 20px 0;
+    border-radius: 10px;
+    background-color: #00ffff40;
+    border: 1px #00ffff70 solid;
+}
+.rating-box{
+    font-size: 24px;
+}
+.categories p{
+    text-decoration: underline;
+    font-size: 30px;
+}
+.category-checkbox{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}

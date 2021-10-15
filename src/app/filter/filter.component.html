@@ -1,0 +1,33 @@
+<div class="filter">
+    <div class="f-bnts-block">
+        <button class="filter-bnt f-bnts" (click)="filter()">Filter</button>
+        <button class="reset-bnt f-bnts" (click)="reset()">Reset</button>
+    </div>
+    <div class="price-range-block">
+        <h4 class="price-range-txt">Price range:</h4>
+        <p class="price-range-txt">
+            <input class="price-range" type="number" [(ngModel)]="minPrice">
+            Min price
+        </p>
+        <p class="price-range-txt">
+            <input class="price-range" type="number" [(ngModel)]="maxPrice">
+            Max price
+        </p>
+    </div>
+    <div class="rating-box">
+        <h4 class="price-range-txt">Rating:</h4>
+        <p *ngFor="let i of stars">
+            <input class="category-checkbox" type="checkbox" [(ngModel)] = "rating[i]"> 
+            {{i}} Star<span *ngIf="i>1">s</span></p>
+    </div>
+    <div *ngIf="categories.length" class="categories">
+        <h4 class="price-range-txt">Categories:</h4>
+        <div *ngFor="let category of categories">
+            <p><input class="category-checkbox" type="checkbox" [(ngModel)] = "categoriesChecker[category]"> {{category}}</p>
+        </div>
+    </div>
+    <div class="f-bnts-block">
+        <button class="filter-bnt f-bnts" (click)="filter()">Filter</button>
+        <button class="reset-bnt f-bnts" (click)="reset()">Reset</button>
+    </div>
+</div>

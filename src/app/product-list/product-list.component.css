@@ -1,0 +1,101 @@
+.products-list{
+    min-height: 645px;
+    display: flex;
+    flex-flow: wrap row;
+    /* justify-content: space-around; */
+    /* height: 1000px; */
+}
+.product{
+    position: relative;
+    margin: 10px 15px;
+    width: 22%;
+    height: 470px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: #aaa 0px 2px 5px;
+}
+.product-title{
+    margin: 10px 21px 25px;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+}
+.product:hover{
+    transition: all 1s;
+    box-shadow: #000 0px 2px 5px;
+}
+.product-image-block1{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+.product-image{
+    max-width: 80%;
+    margin: 20px;
+    max-height: 150px;
+}
+.product-name{
+    height: 120px;
+    border-bottom: #000 1px solid;
+}
+.product-price{
+    height: 20px;
+    font-size: 21px;
+    /* border-bottom: #000 1px solid; */
+}
+.buy-btn-block{
+    /* position: absolute; */
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.buy-btn{
+    /* left: 23%; */
+    height: 50px;
+    width: 130px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.rating{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 23px;
+    color: rgb(254, 207, 0);
+    /* color: #fff; */
+    text-shadow: 0px 0px 3px #000;
+}
+.rating .rating-tip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    border: white 1px solid;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    text-shadow: none;
+    /* Position the tooltip */
+    position: absolute;
+    top: 35px;
+    left: -40px;
+    z-index: 1;
+}
+.rating:hover .rating-tip, .rating:hover .triangle {
+    visibility: visible;
+  }
+.rating .triangle{
+    z-index: 2;
+    visibility: hidden;
+    position: absolute;
+    border-top: white 1px solid;
+    border-left: white 1px solid;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    left:10px;
+    top:25px;
+    transform: rotate(45deg);
+}
