@@ -9,7 +9,7 @@ import { User } from '../models/user';
     providedIn: 'root'
 })
 export class AllService {
-    private BASE_URL = 'http://fakestoreapi.com';
+    private BASE_URL = 'https://fakestoreapi.com';
     
     constructor(private client: HttpClient) {}
 
