@@ -30,7 +30,12 @@ import { CartListComponent } from './cart-list/cart-list.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'apiUrl',
+      useValue: 'http://fakestoreapi.com'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
