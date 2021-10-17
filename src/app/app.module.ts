@@ -33,7 +33,7 @@ import { CartListComponent } from './cart-list/cart-list.component';
   providers: [
     {
       provide: 'apiUrl',
-      useValue: 'https://fakestoreapi.com/'
+      useValue: '//fakestoreapi.com/'
     },
   ],
   bootstrap: [AppComponent]
